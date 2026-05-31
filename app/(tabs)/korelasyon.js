@@ -19,8 +19,8 @@ export default function KorelasyonAnalizPage() {
     try {
       
       const [prodRes, envRes] = await Promise.all([
-        fetch(`${API_BASE_URL}/api/productivity`).then(res => res.json().catch(() => [])),
-        fetch(`${API_BASE_URL}/api/environment`).then(res => res.json().catch(() => []))
+        fetch(`${API_BASE_URL}/api/analysis-productivity`).then(res => res.json().catch(() => [])),
+        fetch(`${API_BASE_URL}/api/analysis-environment`).then(res => res.json().catch(() => []))
       ]);
 
       

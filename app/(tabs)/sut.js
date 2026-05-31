@@ -18,7 +18,7 @@ export default function SutVerileriPage() {
 
   const fetchProductionData = useCallback(async () => {
     try {
-      const res = await fetch(`${API_BASE_URL}/api/productivity`);
+      const res = await fetch(`${API_BASE_URL}/api/analysis-productivity`);
       const rawData = await res.json();
       setData(Array.isArray(rawData) ? rawData : []);
     } catch (err) {

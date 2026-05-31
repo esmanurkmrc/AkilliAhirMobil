@@ -19,7 +19,7 @@ export default function SensorVerileriPage() {
   const fetchSensorData = useCallback(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_BASE_URL}/api/environment`);
+      const res = await fetch(`${API_BASE_URL}/api/analysis-environment`);
       if (!res.ok) throw new Error("Sunucu yanıt vermedi");
       
       const rawData = await res.json();
